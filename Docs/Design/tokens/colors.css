@@ -1,0 +1,77 @@
+/**
+ * Color tokens — Tailwind CSS v4 `@theme` format.
+ * Source: ../style-guide.md §1 (Color)
+ *
+ * Each `--color-*` variable is auto-mapped by Tailwind v4 into utilities:
+ * `--color-primary-900` -> `bg-primary-900`, `text-primary-900`, `border-primary-900`, etc.
+ */
+
+@theme {
+  /* Primary — Espresso. Brand anchor: primary-900 = #4B2E20 (style-guide.md §1.2) */
+  --color-primary-50: #fbf7f3;
+  --color-primary-100: #e8e1dc;
+  --color-primary-200: #d4cac4;
+  --color-primary-300: #c0b4ad;
+  --color-primary-400: #ad9e95;
+  --color-primary-500: #99877e;
+  --color-primary-600: #867166;
+  --color-primary-700: #725b4f;
+  --color-primary-800: #5f4437;
+  --color-primary-900: #4b2e20;
+  --color-primary-950: #2a190f;
+
+  /* Secondary — Caramel. Brand anchor: secondary-500 = #A9744A (style-guide.md §1.3) */
+  --color-secondary-50: #faf1e7;
+  --color-secondary-100: #ead8c8;
+  --color-secondary-200: #dabfa8;
+  --color-secondary-300: #c9a689;
+  --color-secondary-400: #b98d69;
+  --color-secondary-500: #a9744a;
+  --color-secondary-600: #8b5e3c;
+  --color-secondary-700: #7a5233;
+  --color-secondary-800: #624028;
+  --color-secondary-900: #4a2f1c;
+  --color-secondary-950: #391f12;
+
+  /* Neutral — Sand (warm gray). Brand anchor: neutral-100 = #F3E8DB (style-guide.md §1.4) */
+  --color-neutral-50: #fbf8f4;
+  --color-neutral-100: #f3e8db;
+  --color-neutral-200: #e6d8c6;
+  --color-neutral-300: #d3c0a8;
+  --color-neutral-400: #b39b7d;
+  --color-neutral-500: #8f7458;
+  --color-neutral-600: #6e5842;
+  --color-neutral-700: #52402f;
+  --color-neutral-800: #382b20;
+  --color-neutral-900: #241b14;
+  --color-neutral-950: #17110c;
+
+  /* Semantic — new additions, not present in references (style-guide.md §1.5) */
+  --color-success: #6b7a4f;
+  --color-success-bg: #eef1e6;
+  --color-success-border: #c3cbae;
+
+  --color-warning: #c98a2c;
+  --color-warning-bg: #fbf1df;
+  --color-warning-border: #e8c48b;
+
+  --color-error: #b3462c;
+  --color-error-bg: #fbeae4;
+  --color-error-border: #e3ac9a;
+
+  --color-info: #5c7a8a;
+  --color-info-bg: #e8eff1;
+  --color-info-border: #b7cbd2;
+
+  /* Utility */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Semantic aliases — prefer these over raw scale steps in component code */
+  --color-background: var(--color-neutral-50);
+  --color-surface: var(--color-neutral-100);
+  --color-foreground: var(--color-neutral-900);
+  --color-foreground-muted: var(--color-neutral-500);
+  --color-border: var(--color-neutral-300);
+  --color-focus-ring: var(--color-secondary-500);
+}

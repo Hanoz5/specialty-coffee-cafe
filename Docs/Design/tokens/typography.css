@@ -1,0 +1,66 @@
+/**
+ * Typography tokens — Tailwind CSS v4 `@theme` format.
+ * Source: ../style-guide.md §2 (Typography)
+ *
+ * `--font-*` map to Tailwind's `font-*` family utilities.
+ * `--text-*` (with paired `--text-*--line-height`) map to `text-*` size utilities.
+ *
+ * `--font-display` / `--font-sans` bind to the CSS variables next/font/google
+ * generates in app/layout.tsx (`Playfair_Display({ variable: '--font-playfair-display' })`,
+ * `Montserrat({ variable: '--font-montserrat' })`) — same pattern the original
+ * create-next-app starter used for `--font-sans: var(--font-geist-sans)`.
+ */
+
+@theme {
+  /* Families (style-guide.md §2.1) */
+  --font-display: var(--font-playfair-display), ui-serif, Georgia, serif;
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; /* no brand mono face specified — see style-guide.md §2.1 */
+
+  /* Scale (style-guide.md §2.2) */
+  --text-display-2xl: 4.5rem;
+  --text-display-2xl--line-height: 1.05;
+  --text-display-2xl--font-weight: 600;
+
+  --text-display-xl: 3.75rem;
+  --text-display-xl--line-height: 1.1;
+  --text-display-xl--font-weight: 600;
+
+  --text-display-lg: 3rem;
+  --text-display-lg--line-height: 1.15;
+  --text-display-lg--font-weight: 600;
+
+  --text-display-md: 2.25rem;
+  --text-display-md--line-height: 1.2;
+  --text-display-md--font-weight: 600;
+
+  --text-display-sm: 1.875rem;
+  --text-display-sm--line-height: 1.25;
+  --text-display-sm--font-weight: 500;
+
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 1.5;
+
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.55;
+
+  --text-base: 1rem;
+  --text-base--line-height: 1.6;
+
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.5;
+
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.4;
+  --text-xs--font-weight: 600;
+  --text-xs--letter-spacing: 0.08em; /* eyebrow/label tracking, style-guide.md §2.4 */
+
+  /* Weights (style-guide.md §2.3) */
+  --font-weight-display-medium: 500;
+  --font-weight-display-semibold: 600;
+  --font-weight-display-bold: 700;
+  --font-weight-sans-regular: 400;
+  --font-weight-sans-medium: 500;
+  --font-weight-sans-semibold: 600;
+  --font-weight-sans-bold: 700;
+}

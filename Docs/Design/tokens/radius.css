@@ -1,0 +1,15 @@
+/**
+ * Radius tokens — Tailwind CSS v4 `@theme` format.
+ * Source: ../style-guide.md §5 (Radius scale)
+ *
+ * `--radius-*` map to Tailwind's `rounded-*` utilities.
+ */
+
+@theme {
+  --radius-none: 0px;
+  --radius-sm: 6px; /* tags, small chips */
+  --radius-md: 10px; /* inputs, selects, textareas */
+  --radius-lg: 16px; /* cards, panels, modals */
+  --radius-xl: 24px; /* hero image panels, large feature cards */
+  --radius-full: 9999px; /* buttons, badges, avatars, pill nav items */
+}

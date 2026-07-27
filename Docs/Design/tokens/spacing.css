@@ -1,0 +1,19 @@
+/**
+ * Spacing & grid tokens — Tailwind CSS v4 `@theme` format.
+ * Source: ../style-guide.md §3 (Spacing & grid)
+ *
+ * Tailwind v4's default 4px-based `--spacing` scale is inherited as-is (not
+ * redeclared here — no reference material justifies overriding it). Only the
+ * semantic, layout-specific tokens observed in the references are added.
+ */
+
+@theme {
+  --spacing-section-y: 6rem; /* 96px — vertical rhythm between sections, mobile */
+  --spacing-section-y-lg: 8rem; /* 128px — >= lg breakpoint, matches starter's py-32 */
+  --spacing-card-gap: 1.5rem; /* 24px — gap between cards in a row/grid */
+  --spacing-content-gap: 1.75rem; /* ~28px — heading/body/CTA stack gap inside a section */
+
+  --container-max: 80rem; /* 1280px — centered content width, all 3 full-page refs */
+  --container-padding: 1.5rem; /* mobile gutter */
+  --container-padding-lg: 4rem; /* desktop gutter, matches starter's px-16 */
+}

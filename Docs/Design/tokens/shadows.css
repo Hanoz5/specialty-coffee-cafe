@@ -1,0 +1,17 @@
+/**
+ * Elevation / shadow tokens — Tailwind CSS v4 `@theme` format.
+ * Source: ../style-guide.md §4 (Elevation & shadow)
+ *
+ * `--shadow-*` map to Tailwind's `shadow-*` utilities. Tinted warm-brown
+ * (rgba of primary-900 / #4A2F1C-ish) rather than pure black, per the
+ * floating card/badge treatment in Design 1.
+ */
+
+@theme {
+  --shadow-none: none;
+  --shadow-sm: 0 1px 2px rgba(74, 47, 28, 0.06);
+  --shadow-md: 0 4px 12px rgba(74, 47, 28, 0.1);
+  --shadow-lg: 0 10px 24px rgba(74, 47, 28, 0.14);
+  --shadow-xl: 0 20px 40px rgba(74, 47, 28, 0.18);
+  --shadow-2xl: 0 28px 64px rgba(74, 47, 28, 0.24);
+}

@@ -1,0 +1,14 @@
+/**
+ * Design token entry point.
+ *
+ * Wired into the app via `app/globals.css`'s `@import "../docs/design/tokens/index.css"`,
+ * above the `@theme` block Tailwind v4 reads. This is the single source of truth for tokens —
+ * edit here, not in app/globals.css.
+ */
+
+@import "./colors.css";
+@import "./typography.css";
+@import "./spacing.css";
+@import "./radius.css";
+@import "./shadows.css";
+@import "./breakpoints.css";

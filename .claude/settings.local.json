@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.pexels.com)",
+      "Bash(curl -s -o /dev/null -w \"port 3001: %{http_code}\\\\n\" http://localhost:3001/ --max-time 5)",
+      "Bash(curl -s -o /dev/null -w \"port 3000: %{http_code}\\\\n\" http://localhost:3000/ --max-time 5)",
+      "Bash(curl -s http://localhost:3000/menu --max-time 10)",
+      "Bash(npx tsc *)",
+      "Bash(grep -rnE 'className=\"[^\"]*#[0-9a-fA-F]{3,6}' app components)",
+      "Bash(npx eslint *)",
+      "Bash(npm run *)",
+      "Bash(file Docs/Design/References/*.webp)",
+      "Bash(awk -F, 'NR>1 && $5!=\"\" {print $5}' Docs/menu.csv)",
+      "Bash(node scripts/validate-menu.mjs)",
+      "PowerShell(node scripts/validate-menu.mjs)",
+      "PowerShell(Get-Command npm -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command npx -ErrorAction SilentlyContinue)",
+      "PowerShell($paths = @\\(\"C:\\\\Program Files\\\\nodejs\\\\node.exe\",\"C:\\\\Program Files \\(x86\\)\\\\nodejs\\\\node.exe\",\"$env:APPDATA\\\\npm\\\\node.exe\",\"$env:LOCALAPPDATA\\\\Programs\\\\nodejs\\\\node.exe\"\\); foreach \\($p in $paths\\) { if \\(Test-Path $p\\) { Write-Output \"FOUND: $p\" } }; Write-Output \"---nvm---\"; if \\(Test-Path \"$env:APPDATA\\\\nvm\"\\) { Get-ChildItem \"$env:APPDATA\\\\nvm\" -ErrorAction SilentlyContinue }; Write-Output \"---PATH---\"; $env:PATH -split ';' | Select-String -Pattern \"node\")",
+      "PowerShell(& \"C:\\\\Program Files\\\\nodejs\\\\node.exe\" scripts\\\\validate-menu.mjs)",
+      "Bash(cp scripts/Badge.tsx.clean-backup components/ui/Badge.tsx)",
+      "Bash(rm scripts/Badge.tsx.clean-backup)",
+      "Bash(rmdir scripts *)",
+      "Bash(cd \"C:\\\\Users\\\\Admin\\\\Documents\\\\Projects\\\\specialty-coffee-cafe\" && ls .claude/ 2>/dev/null; ls .claude/skills 2>/dev/null; echo \"---\"; ls \"C:\\\\Users\\\\Admin\\\\.claude\\\\skills\" 2>/dev/null | head -5)",
+      "Bash(mkdir -p \"C:\\\\Users\\\\Admin\\\\Documents\\\\Projects\\\\specialty-coffee-cafe\\\\.claude\\\\skills\\\\menu-item-formatter\")",
+      "Bash(awk -F',' '{print NF}' Docs/menu.csv.before-skill-demo)",
+      "Bash(ls \"C:\\\\Program Files\\\\nodejs\\\\\" | grep -i npm)",
+      "PowerShell(Get-CimInstance Win32_Process -Filter \"ProcessId=6312\")",
+      "PowerShell(Stop-Process -Id 6312 -Force -Confirm:$false)",
+      "Bash(git init *)",
+      "Bash(git config *)",
+      "Bash(git add *)"
+    ]
+  }
+}
