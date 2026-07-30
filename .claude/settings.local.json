@@ -29,7 +29,22 @@
       "PowerShell(Stop-Process -Id 6312 -Force -Confirm:$false)",
       "Bash(git init *)",
       "Bash(git config *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(gh auth *)",
+      "Bash(python3 -c \"import reportlab; print\\('reportlab', reportlab.Version\\)\")",
+      "Bash(python3 -c \"import weasyprint\")",
+      "PowerShell(Get-Command python -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command py -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command python3 -ErrorAction SilentlyContinue)",
+      "PowerShell(& \"C:\\\\Program Files\\\\nodejs\\\\node.exe\" \"C:\\\\Users\\\\Admin\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Admin-Documents-Projects-specialty-coffee-cafe\\\\97f5571f-c481-4a52-bfd7-3558bf494f31\\\\scratchpad\\\\inject-images.mjs\")",
+      "Read(//c/Program Files \\\\\\(x86\\\\\\)/Microsoft/Edge/Application/**)",
+      "Read(//c/Program Files \\\\\\(x86\\\\\\)/Google/Chrome/Application/**)",
+      "PowerShell(& \"C:\\\\Program Files\\\\nodejs\\\\node.exe\" \"C:\\\\Users\\\\Admin\\\\Documents\\\\Projects\\\\specialty-coffee-cafe\\\\node_modules\\\\typescript\\\\bin\\\\tsc\" --noEmit -p \"C:\\\\Users\\\\Admin\\\\Documents\\\\Projects\\\\specialty-coffee-cafe\\\\tsconfig.json\")",
+      "PowerShell(& \"C:\\\\Program Files\\\\nodejs\\\\node.exe\" \"C:\\\\Users\\\\Admin\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Admin-Documents-Projects-specialty-coffee-cafe\\\\5430cb2f-40f1-4934-9172-577623257c0b\\\\scratchpad\\\\check-dupes.mjs\")",
+      "Bash(xargs grep -l \"duration\")",
+      "Bash(git worktree *)",
+      "Bash(git branch *)"
     ]
   }
 }

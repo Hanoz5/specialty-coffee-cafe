@@ -54,6 +54,13 @@ links to `/#reserve` rather than a separate route.
 - After writing or editing any `.tsx`/`.css` in `app/` or `components/`, run the
   `design-system-compliance` subagent (`.claude/agents/design-system-compliance.md`) against the
   changed files before considering the change done.
+- **Premium-redesign additions (evolution, not replacement, of the above):** `tokens/motion.css`
+  defines `--duration-*`/`--ease-*` tokens (style-guide §8) for scroll-reveal and hover motion;
+  [`components/ui/Reveal.tsx`](components/ui/Reveal.tsx) is the one approved scroll-reveal
+  wrapper (respects `prefers-reduced-motion`, fires once) — don't hand-roll another. The menu and
+  "Most Loved" grids use an **editorial** layout, not a uniform grid: the first item in a section
+  gets `size="feature"` on `MenuItemCard` (larger tile, spans 2 grid columns), the rest cycle
+  through varied aspect ratios — see style-guide §3 "Editorial rhythm" and `reveal.md`.
 
 ## Structured content
 
@@ -79,8 +86,11 @@ links to `/#reserve` rather than a separate route.
   (`app/actions/reservation.ts`) — never trust client-only validation, re-run it server-side, as
   the existing code already does.
 - Menu/site imagery is sourced from verified Pexels URLs in `lib/menu-images.ts` /
-  `lib/site-images.ts` — not local files, not `next/image` static imports. Don't invent new image
-  URLs; if a new one is needed, it must be a real, verified Pexels URL with a descriptive `alt`.
+  `lib/site-images.ts` — not local files, not `next/image` static imports. **Never invent, guess,
+  or extrapolate a Pexels photo ID or URL** — every entry must come from an actual, visited Pexels
+  page. `lib/menu-images.ts` maps **one unique image per menu item by name** (`menuItemImages`) —
+  no two items or site sections may share the same photo; a per-category fallback pool exists only
+  as a stopgap for an item not yet populated, never as a long-term duplicate.
 
 ## Explicitly out of scope
 

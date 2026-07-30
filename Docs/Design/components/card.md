@@ -29,7 +29,7 @@ Internal padding: 20px (`sm` card, e.g. stat block), 24px (`md`, default), 32px 
 | State | Treatment |
 |---|---|
 | Default | `--shadow-md` |
-| Hover (if interactive/clickable) | lifts to `--shadow-lg`, translateY(-2px), 150ms ease-out |
+| Hover (if interactive/clickable) | lifts to `--shadow-lg`, translateY(-2px), `--duration-fast` (150ms) with `--ease-out-soft` (`Docs/Design/tokens/motion.css`) |
 | Focus-visible (if card itself is the interactive element, e.g. wrapped in a link) | 2px `--color-focus-ring` ring around the whole card, 2px offset |
 | Loading (skeleton) | media + text blocks replaced with `--color-neutral-200` pulsing placeholders at the same dimensions, never a layout shift on load |
 
@@ -42,7 +42,8 @@ Internal padding: 20px (`sm` card, e.g. stat block), 24px (`md`, default), 32px 
 ## Tokens used
 
 `--color-neutral-50/100/200`, `--color-primary-900`, `--radius-lg/xl`, `--shadow-md/lg/xl`,
-`--text-display-sm` (title), `--text-base` (body), `--text-lg` (price).
+`--text-display-sm` (title), `--text-base` (body), `--text-lg` (price), `--duration-fast`,
+`--ease-out-soft` (hover lift).
 
 ## Accessibility
 

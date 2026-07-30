@@ -39,7 +39,7 @@ export function Card({
       className={cn(
         "block overflow-hidden rounded-lg",
         VARIANT_CLASSES[variant],
-        href && "transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg",
+        href && "transition-all duration-[var(--duration-fast)] ease-[var(--ease-out-soft)] hover:-translate-y-0.5 hover:shadow-lg",
         href &&
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-2",
         className,

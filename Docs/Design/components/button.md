@@ -19,6 +19,7 @@ past the text, never icon-only without an accessible label (`aria-label`).
 | `accent` | `--color-secondary-600` | `--color-neutral-100` | none | Extrapolated — not directly shown, for a single accent CTA distinct from the dark primary (e.g. promotional banner). Uses `secondary-600`, not the `secondary-500` brand anchor — see Accessibility note below |
 | `ghost` | transparent | `--color-primary-900` | none | Extrapolated — low-emphasis inline action (nav "Sign In") |
 | `destructive` | `--color-error` | `--color-neutral-100` | none | Extrapolated — no destructive action shown in references; needed for account/order-cancel flows |
+| `outline-inverse` | transparent | `--color-neutral-50` | 1px `--color-neutral-50` at 40% opacity | Extrapolated — the `secondary` pattern's inverse, for a CTA placed directly over a photographic/dark hero (Hero's "View the Menu"). Never pair with `secondary`'s Espresso-on-Cream contrast logic — this variant needs light text on a scrimmed dark photo instead |
 
 ## Sizes
 
@@ -44,7 +45,7 @@ Minimum 44×44px hit area maintained even at `sm` via padding, per
 
 ## Tokens used
 
-`--color-primary-800/900/950/50/100`, `--color-neutral-200/300/400/100`, `--color-secondary-600/700`,
+`--color-primary-800/900/950/50/100`, `--color-neutral-200/300/400/100/50`, `--color-secondary-600/700`,
 `--color-focus-ring`, `--radius-full`, `--shadow-sm` (rest), `--shadow-md` (hover, optional lift),
 `--text-sm/base/lg`, `--font-weight-sans-medium`.
 

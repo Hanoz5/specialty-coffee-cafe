@@ -220,6 +220,14 @@ justifies a custom spacing unit. Documented here for the semantic rhythm actuall
 
 Column grid: standard 12-column, `gap-6` (24px) default, collapsing to 1–2 columns below `md`.
 
+**Editorial rhythm (added in the premium-redesign pass):** uniform grids of identically-sized
+cards read as a template. Where a section presents a curated set of items (menu categories, "Most
+Loved"), the first/most representative item takes a **feature** treatment — larger image area,
+larger heading — spanning 2 columns of the grid, with the remaining items at standard size and
+alternating aspect ratios (`4/3`, `3/4`, `1/1`) rather than one repeated ratio. This is a layout
+convention, not a new token: it's expressed via grid `col-span`/`row-span` utilities and the
+existing `imageAspectClassName` prop on `Card`, applied by the parent section.
+
 ## 4. Elevation & shadow
 
 Shadows use a warm-brown tint (`rgba(74, 47, 28, …)`) instead of pure black, so elevated surfaces
@@ -274,7 +282,35 @@ a dependency).
 - **Motion:** respect `prefers-reduced-motion`; no scroll-triggered or hover animation should be the only way to access content.
 - **Text over imagery:** the hero pattern in Designs 1 & 3 (headline over photography) needs either a scrim/gradient overlay or the headline placed on a solid Espresso-900/Cream-100 panel — never raw text directly on unprocessed photography without verifying contrast per-image.
 
+## 8. Motion
+
+Added in the premium-redesign pass — the reference marketing comps are static, so this section is
+extrapolated to match the "cinematic, tactile" brief while staying restrained (a boutique café,
+not a product-launch site).
+
+| Token | Value | Use |
+|---|---|---|
+| `--duration-fast` | 150ms | Hover/focus state changes (existing Button/Card transitions — unchanged) |
+| `--duration-base` | 400ms | Scroll-reveal fade/rise for section content |
+| `--duration-slow` | 900ms | Hero entrance, category-intro reveals |
+| `--duration-ambient` | 14s | One-shot settle on the hero background image (scale + drift, `forwards`, not looping) |
+| `--ease-standard` | `cubic-bezier(0.22, 1, 0.36, 1)` | Decelerate — reveals, entrances, the hero's one-shot settle |
+| `--ease-out-soft` | `cubic-bezier(0.16, 1, 0.3, 1)` | Hover lifts (`Card`'s `hover:-translate-y-0.5`) |
+
+**Rules:**
+- Every scroll-triggered or ambient animation must respect `prefers-reduced-motion: reduce` — when
+  set, content appears immediately at its resting state, no exceptions (§7 already requires this;
+  restated here because motion is now a real surface, not just a guideline).
+- The hero's ambient drift runs **once** (`animation-fill-mode: forwards`, not `infinite`) and then
+  holds — an indefinitely-looping background animation is auto-updating content a visitor has no
+  way to pause or stop (WCAG 2.2.2); a single slow settle avoids that entirely rather than adding
+  a pause control to a decorative background.
+- Motion reveals content that's already there — never gate content behind an animation the user
+  can't skip or that fails to complete.
+- One ambient motion per view maximum (the hero's one-shot image settle). Reveals fire once per
+  element on first scroll into view, not on every re-entry — restraint over spectacle.
+
 ## Cross-reference index
 
-- Machine-readable tokens implementing this guide: [`tokens/`](./tokens/) (`colors.css`, `typography.css`, `spacing.css`, `radius.css`, `shadows.css`, `breakpoints.css`)
+- Machine-readable tokens implementing this guide: [`tokens/`](./tokens/) (`colors.css`, `typography.css`, `spacing.css`, `radius.css`, `shadows.css`, `breakpoints.css`, `motion.css`)
 - Component-level application of these tokens: [`components/`](./components/)
