@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "../docs/design/tokens/index.css";
+@import "../Docs/Design/tokens/index.css";
 
 body {
   background: var(--color-background);

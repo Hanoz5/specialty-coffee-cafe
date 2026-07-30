@@ -30,10 +30,10 @@ function parseCsv(content: string): MenuItem[] {
   });
 }
 
-/** Reads and parses docs/menu.csv. Server-only — never import from a 'use client' file. */
+/** Reads and parses Docs/menu.csv. Server-only — never import from a 'use client' file. */
 export function getMenuItems(): MenuItem[] {
   if (cachedItems) return cachedItems;
-  const filePath = path.join(process.cwd(), "docs", "menu.csv");
+  const filePath = path.join(process.cwd(), "Docs", "menu.csv");
   const content = readFileSync(filePath, "utf-8");
   cachedItems = parseCsv(content);
   return cachedItems;

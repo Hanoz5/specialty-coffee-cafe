@@ -71,7 +71,10 @@
       "Bash(git fetch *)",
       "Bash(git check-ignore *)",
       "Bash(git commit --amend -m ' *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "PowerShell(& \"C:\\\\Program Files\\\\nodejs\\\\node.exe\" \"C:\\\\Program Files\\\\nodejs\\\\node_modules\\\\npm\\\\bin\\\\npx-cli.js\" --yes vercel --version 2>&1)",
+      "Bash(\"C:\\\\Program Files\\\\nodejs\\\\node.exe\" \"C:\\\\Program Files\\\\nodejs\\\\node_modules\\\\npm\\\\bin\\\\npx-cli.js\" --yes vercel whoami)",
+      "Bash(\"C:\\\\Program Files\\\\nodejs\\\\node.exe\" \"C:\\\\Program Files\\\\nodejs\\\\node_modules\\\\npm\\\\bin\\\\npx-cli.js\" --yes vercel --prod --yes)"
     ]
   }
 }
