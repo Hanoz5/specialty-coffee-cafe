@@ -44,7 +44,9 @@
       "PowerShell(& \"C:\\\\Program Files\\\\nodejs\\\\node.exe\" \"C:\\\\Users\\\\Admin\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Admin-Documents-Projects-specialty-coffee-cafe\\\\5430cb2f-40f1-4934-9172-577623257c0b\\\\scratchpad\\\\check-dupes.mjs\")",
       "Bash(xargs grep -l \"duration\")",
       "Bash(git worktree *)",
-      "Bash(git branch *)"
+      "Bash(git branch *)",
+      "Bash(git remote *)",
+      "Bash(git push *)"
     ]
   }
 }
