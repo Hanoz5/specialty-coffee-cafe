@@ -83,7 +83,9 @@
       "Bash(gh --version)",
       "PowerShell(Get-Command winget -ErrorAction SilentlyContinue)",
       "Bash(git credential *)",
-      "Bash(git checkout *)"
+      "Bash(git checkout *)",
+      "Bash(tee /tmp/pr_response.json)",
+      "Bash(grep -E '\"number\"|\"state\"' /tmp/pr_response.json | head -3; rm -f /tmp/pr_response.json)"
     ]
   }
 }
