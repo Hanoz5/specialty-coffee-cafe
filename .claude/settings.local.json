@@ -74,7 +74,18 @@
       "Bash(git commit *)",
       "PowerShell(& \"C:\\\\Program Files\\\\nodejs\\\\node.exe\" \"C:\\\\Program Files\\\\nodejs\\\\node_modules\\\\npm\\\\bin\\\\npx-cli.js\" --yes vercel --version 2>&1)",
       "Bash(\"C:\\\\Program Files\\\\nodejs\\\\node.exe\" \"C:\\\\Program Files\\\\nodejs\\\\node_modules\\\\npm\\\\bin\\\\npx-cli.js\" --yes vercel whoami)",
-      "Bash(\"C:\\\\Program Files\\\\nodejs\\\\node.exe\" \"C:\\\\Program Files\\\\nodejs\\\\node_modules\\\\npm\\\\bin\\\\npx-cli.js\" --yes vercel --prod --yes)"
+      "Bash(\"C:\\\\Program Files\\\\nodejs\\\\node.exe\" \"C:\\\\Program Files\\\\nodejs\\\\node_modules\\\\npm\\\\bin\\\\npx-cli.js\" --yes vercel --prod --yes)",
+      "Bash(\"C:\\\\Program Files\\\\nodejs\\\\node.exe\" \"C:\\\\Program Files\\\\nodejs\\\\node_modules\\\\npm\\\\bin\\\\npx-cli.js\" --yes vercel alias set specialty-coffee-cafe-1i3jucqh0-hanozavari5-4986s-projects.vercel.app dripsters.vercel.app)",
+      "Bash(\"C:\\\\Program Files\\\\nodejs\\\\node.exe\" \"C:\\\\Program Files\\\\nodejs\\\\node_modules\\\\npm\\\\bin\\\\npx-cli.js\" --yes vercel project inspect specialty-coffee-cafe)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" \"https://dripsters-cafe.vercel.app/\")",
+      "Bash(curl -sI \"https://dripsters-cafe.vercel.app/\")",
+      "Bash(\"C:\\\\Program Files\\\\nodejs\\\\node.exe\" \"C:\\\\Program Files\\\\nodejs\\\\node_modules\\\\npm\\\\bin\\\\npx-cli.js\" --yes vercel alias ls)",
+      "Bash(gh --version)",
+      "PowerShell(Get-Command winget -ErrorAction SilentlyContinue)",
+      "Bash(git credential *)",
+      "Bash(git checkout *)",
+      "Bash(tee /tmp/pr_response.json)",
+      "Bash(grep -E '\"number\"|\"state\"' /tmp/pr_response.json | head -3; rm -f /tmp/pr_response.json)"
     ]
   }
 }
